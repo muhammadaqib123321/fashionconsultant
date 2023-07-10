@@ -2,6 +2,7 @@
 body{
     overflow-x: hidden;
 }
+
 @font-face {
     font-family: 'Proxima Nova'; /* Define the name of the font family */
     src: url('assets/css/Proxima Nova Font.otf') format('opentype'); /* Specify the path to the font file */
@@ -11,11 +12,11 @@ body{
 }
 .themecolor{
   color: white;
-  background-color:  #011e3e;
+  background-color:  #301934;
 }
 
 .navBackColor{
-    background-color: var(--primary-color);
+    background-color: #301934;
     letter-spacing: 0.25rem;
 }
 .navBackColor .nav-link{
@@ -153,7 +154,7 @@ video {
 }
 .stylegrooming{
     text-align: center;
-    background-color: #0c0c0c;
+    background-color: #301934;
     padding: 10px 24px;
     border-color:  #000000;
     border-radius: 300px;
@@ -186,7 +187,7 @@ video {
     }
 
     .accordion-button,.accordion-button:not(.collapsed){
-    background-color: #011e3e;
+    background-color: #301934;
     color: white;
     padding: 3rem 0 3rem 0;
     box-shadow: unset;
@@ -197,7 +198,7 @@ video {
         border-top-left-radius: unset;
         border-bottom-left-radius: unset;
         border-color: #5a6575;
-        background-color: #011e3e;
+        background-color: #301934;
         color: white;
 
     } 
@@ -205,7 +206,7 @@ video {
        
         border-top-left-radius: unset;
         border-top-right-radius: unset;
-        background-color: #011e3e;
+        background-color: #301934;
         color: white;
     }
     .accordion-item:last-of-type{
