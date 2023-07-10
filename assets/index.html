@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pivot | Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/styleSheet.css">
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1c1c1c;
+            min-width: 160px;
+            width: 31rem;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .previous-person {
+            font-weight: 900;
+            font-style: normal;
+            font-size: 42px;
+            letter-spacing: .03em;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .the-most {
+            font-weight: 900;
+            font-style: normal;
+            font-size: 42px;
+            letter-spacing: .03em;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .slideshow {
+            position: relative;
+            height: auto;
+            border-radius: 20px;
+            /* background-position: top 15px left 15px, bottom 40% right 15px; */
+            background-repeat: no-repeat;
+            /* background-size: 180px, 180px; */
+            z-index: 3;
+        }
+
+        button.slick-prev.slick-arrow {
+            position: absolute;
+            z-index: 9999;
+            bottom: -80px;
+            right: 160px;
+            background: transparent;
+            color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            height: 15px;
+            width: 30px;
+            padding: 0;
+            background-image: url('/assets/img/arrow-left.png');
+            background-size: 100% 100%;
+        }
+
+        button.slick-next.slick-arrow {
+            position: absolute;
+            bottom: -82px;
+            right: 105px;
+            background: transparent;
+            color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+            height: 18px;
+            width: 40px;
+            background-image: url('/assets/img/arrow-right.png');
+            background-size: 100% 100%;
+        }
+
+        .pagingInfo {
+            position: absolute;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        .section-area-6 p {
+            font-weight: 300;
+            font-style: normal;
+            font-size: 19px;
+            letter-spacing: .01em;
+            line-height: 1.7em;
+            text-transform: none;
+            color: #141414;
+        }
+
+        .section-area-7 {
+            background-image: url(/assets/img/logo-sections.png);
+            background-repeat: no-repeat;
+            background-size: 120% 100%;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navBackColor fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/assets/img/pivotLogo.png" class="img-fluid" width="133"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropbtn">IMAGE CONSULTATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="#">VIRTUAL STYLE CONSULTATION PACKAGE</a>
+                            <a href="#">IN-PERSON STYLE CONSULTATION PACKAGE</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">FREE RESOURCES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-danger">WORK WITH ME</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="home container-fluid p-0 d-flex">
+        <video muted loop autoplay>
+            <source src="/assets/videos/Background.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-3">
+                <img src="assets/img/header-banner.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6 home-inner">
+                <h1 class="mb-4">A PERSONAL STYLIST + <br>IMAGE CONSULTANT <br> <span style="color:#aaa">EXCUSIVELY FOR
+                        MEN.</span></h1>
+                <p><strong>I Help Successful Guys Efficiently Elevate Their Appearance.</strong></p>
+                <p>Feel Confident In The Way You Look Without All The Trial And Error. This Is Personal Styling For Men
+                    Made Easy. </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="my-5">
+        <div class="container">
+            <h5 class="text-center fw-bold">AS SEEN IN</h5>
+            <div class="text-center">
+                <div class="d-flex flex-column mt-5 mb-4 flex-md-row justify-content-center">
+                    <img src="/assets/img/section-img-01.png" class="mx-auto mx-lg-3 mb-3 mb-md-auto" width="403"
+                        alt="">
+                    <img src="/assets/img/section-img-03.png" class="mx-auto mx-lg-3" width="403" alt="">
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-center">
+                    <img src="/assets/img/section-img-02.png" class="mx-auto mx-lg-3 mb-3 mb-md-auto" width="403"
+                        alt="">
+                    <img src="/assets/img/section-img-04.png" class="mx-auto mx-lg-3" width="403" alt="">
+                </div>
+                <hr class="mx-auto my-5" style="width: min(80%,800px);">
+            </div>
+        </div>
+    </section>
+
+    <section class="" style="margin: 7rem 0;">
+        <div class="container">
+            <div class="col-12">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-4 position-relative">
+                        <h1 class="looking-good"><span>LOOKING GOOD</span> ISN’T EASY <span>FOR MEN.</span></h1>
+                        <div class="transitionEffect">
+                            <img src="./assets/img/Personal+stylist+best+mens+style+consultant+patrick+kenger.jpg"
+                                class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5 class="fw-semibold">IF YOU’RE LIKE MOST GUYS, YOU’RE LOOKING FOR A PERSONAL STYLIST BECAUSE…
+                        </h5>
+                        <ul class="ul-space-li">
+                            <li>You have no clue what looks good on you</li>
+                            <li>You have a closet full of clothing you don’t enjoy wearing</li>
+                            <li>You’ve been lost trying to figure out the right hairstyle for your face shape</li>
+                            <li>You want high-quality clothing and to invest in the right stuff, but you don’t know
+                                where to do it or what to buy</li>
+                            <li>You hate shopping and waste money because you don’t know what to buy</li>
+                            <li>You feel like other well-dressed guys know something you don’t</li>
+                            <li>You want to dress the “right” way, but still feel like yourself</li>
+                            <li>You want to look the part for your wife, girlfriend, or career but don’t know how</li>
+                            <li>You want to dress appropriately for your age without looking too old/young</li>
+                            <li>You want to appear put-together and attractive, without looking like you’re trying or
+                                “over-done”</li>
+                            <li>You want to learn the principles of great style without all the fluff.</li>
+                            <li>You went through a life change - lost or gained weight, switched careers or got a
+                                promotion, changed your relationship status, etc.</li>
+                            <li>You believe improving your style can change your life, or help you “look the part” for
+                                your life</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #001f3e;">
+        <div class="container" style="padding: 8rem 0;">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="fw-bold text-white lh-sm">YOU WANT TO LOOK <br>YOUR BEST.</h1>
+                        <h1 class="fw-bold  text-white pt-2 lh-sm">WE GET YOU THERE AS <br>EFFICIENTLY AS <br>POSSIBLE.
+                        </h1>
+                    </div>
+                    <div class="col-md-6">
+                        <p class=" text-white lh-lg">I help you efficiently elevate your appearance by working with you
+                            1-on-1 either virtually or
+                            in-person. You’ll come away with a beautiful capsule wardrobe of stuff you love that fits
+                            you well, your existing clothing tailoring and/or donated if needed, as well as the
+                            knowledge to know how to always look your best. Become the best-dressed guy in the room
+                            instead of wasting time and money.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <img src="assets/img/background-Image.png" alt=""> -->
+    </section>
+
+    <section class="section-area-03 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+                    <h1 class="fw-semibold text-white mx-auto text-center previous-person"> <span class="fw-bolder">800+
+                            PREVIOUS PERSONAL STYLING TRANSFORMATIONS</span> FROM AROUND THE WORLD</h1>
+                </div>
+                <div class="col-md-9">
+                    <hr class="w-25 text-white mx-auto my-4 " style="border: 1px solid #fff;">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="fw-semibold text-white mx-auto text-center the-most"><span class="fw-bolder"> THE MOST
+                            REVIEWED & HIGHEST-RATED</span> MEN’S WARDROBE STYLIST IN THE UNITED STATES</h1>
+                </div>
+                <div class="col-md-7">
+                    <div class="slideshow pt-5 p-2">
+
+                        <img src="/assets/img/homeslider-01.png" alt="">
+                        <img src="/assets/img/homeslider-01.png" alt="">
+                        <img src="/assets/img/homeslider-01.png" alt="">
+                        <img src="/assets/img/homeslider-01.png" alt="">
+                        <img src="/assets/img/homeslider-01.png" alt="">
+                        <img src="/assets/img/homeslider-01.png" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .moon {
+            float: right;
+            shape-outside: inset(-5% round 50%);
+        }
+
+        .section-area-5 h1 {
+            line-height: 0.3rem;
+        }
+    </style>
+
+    <section class="section-area-4">
+        <div class="container pb-5 mb-5 mt-5 ">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <img class="moon" src="/assets/img/Untitled+design.png" width="300" alt="">
+                    <h1 style="font-weight: 800;
+                    font-style: normal;
+                    font-size: 42px;
+                    letter-spacing: .03em;
+                    line-height: 1em;
+                    text-transform: uppercase;">HI, I’M PATRICK - AN IMAGE CONSULTANT & PERSONAL STYLIST JUST FOR MEN.
+                        </h2>
+                        <p class="pt-4" style="font-size: 19px;">
+                            Hi, I’m Patrick - I'm a men’s personal stylist and image consultant who works exclusively
+                            with
+                            guys like you, both online and in-person, helping you develop your personal style, handle
+                            your
+                            grooming and give you the personalized answers and recommendations you need to become a more
+                            attractive guy.
+                            <br>
+                            <br>
+                            As a man, I understood the challenges of dressing your body, the confusion of shopping, and
+                            not
+                            having a clue what looks good on you.
+                            <br>
+                            <br>
+                            There was nothing in the market to really help guys navigate this territory.
+                            <br>
+                            <br>
+                            <span style="text-decoration: underline;">
+                                Aside from generic, un-personalized subscription boxes, female friends and spouses
+                                uncomfortably
+                                giving it their best shot, and overpriced style Ebooks and courses produced by
+                                uneducated
+                                bloggers, there wasn't anything that could give men the real answers they needed.
+                            </span>
+                            <br>
+                            <br>
+                            I changed that.
+                            <br>
+                            <br>
+                            As a certified men’s stylist, I've personally walked through transforming hundreds of men’s
+                            styles from around the globe, helping to navigate their style and grooming challenges. From
+                            NYT
+                            and WSJ best-selling authors, TED speakers, Fortune 100 CEOs, Netflix stars and TV
+                            personalities
+                            to regular guys who just want to look good for their partner or their profession — I show
+                            you
+                            what actually works for you personally and why, assisting you through the entire process.
+                            <br>
+                            <br>
+                            If you want to look your best and feel confident in your appearance, I'd be delighted to
+                            help by
+                            working with you 1-on-1. If you have questions, apply for a call with me directly, or you
+                            can
+                            learn more about me personally here.
+                            <br>
+                            <br>
+                            Continue reading to learn more about the process, and I hope to see you soon.
+                            <br>
+                            <br>
+                            -Patrick Kenger
+                            <br>
+                            <br>
+                            Your Personal Stylist + Founder of PIVOT Image Consulting
+                        </p>
+                        <img src="/assets/img/patrick-pivot-mens-image-consulting-signature.png" width="150" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #001f3e;" class="section-area-5">
+        <div class="container" style="padding: 8rem 0;">
+            <div class="col-md-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center px-4">
+                        <h1 class="fw-bold  text-white pt-2 lh-sm">"A REAL GUY WITH REAL ANSWERS. I CAN'T SAY THANKS
+                            ENOUGH."
+                        </h1>
+                        <br>
+                        <span class="text-white">
+                            — David B.
+                        </span>
+                    </div>
+                    <div class="col-md-4 text-center px-4">
+                        <h1 class="fw-bold  text-white pt-2 lh-sm">"THE BEST PURCHASE I'VE EVER MADE TO IMPROVE MYSELF."
+                        </h1>
+                        <br>
+                        <span class="text-white">
+                            — Gen O.
+                        </span>
+                    </div>
+                    <div class="col-md-4 text-center px-4">
+                        <h1 class="fw-bold  text-white pt-2 lh-sm">"PATRICK TAUGHT ME WHAT THE VIDEOS AND MAGAZINES
+                            MISSED."
+                        </h1>
+                        <br>
+                        <span class="text-white">
+                            — Pat H.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section-area-6 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1>
+                        WHY PIVOT IMAGE CONSULTING & PERSONAL STYLING?
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon1.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;color: black; font-weight: 600;">1-ON-1 / MAN-TO-MAN</h4>
+                            <p>You will work 1-on-1 with me personally. </p>
+                            <p>This isn’t a course, subscription box, outsourced program, or group training.</p>
+                            <p>Because of this, I only take on a select number of clients per month to allow for
+                                specialized individual attention.</p>
+                            <p>
+                                You now <span style="text-decoration: underline;"> have a coach who has been “there and
+                                    done it” for himself and 800+ guys 1-on-1 around the world</span> over the last 8
+                                years.
+
+                            </p>
+                            <p>
+                                From start to finish, you’ll have me as your guide, navigating you efficiently through
+                                how to look your absolute best.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon2.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;">
+                                SPECIALIZATION IN MEN
+                            </h4>
+                            <p>
+                                I am a man, who works only with men, <span style="text-decoration: underline;"> focused
+                                    only on men’s style and grooming</span>. Rather than offering services to style
+                                women, children, your apartment, etc, <span style="text-decoration: underline;"> I do
+                                    only one thing - make men look their best. </span>
+                            </p>
+                            <p>
+                                Mastery requires specialization. If you want to get the job done, not only well but
+                                efficiently, you go to the expert. Think Neurosurgeon over family practitioner.
+                            </p>
+                            <p>
+                                And because I’m a man, I get to test everything, practicing what I preach.
+                            <p>
+                                Could a woman do the same? Do you feel like you understand the female body better than
+                                your own?
+                            </p>
+                            <p>
+                                The way I phrase it: Never trust a skinny chef.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon2.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;">
+                                EVIDENCE-BASED SUGGESTIONS
+                            </h4>
+                            <p>
+                                Most stylists, significant others, and salespeople will base suggestions around what
+                                they like or what they’re getting paid to recommend; however, this rarely translates to
+                                what actually looks good on you personally.
+                            </p>
+                            <p>
+                                Everything I recommend is based on what works best for you - Your face, your coloring,
+                                your body, your style, etc., not mine. PLUS I show you why it works. We’ve made this as
+                                close to a science as possible.
+                            </p>
+                            <p>
+                                We’ve also taken zero sponsorship dollars or paid advertising to date. That’s almost
+                                unheard of.
+                            <p>
+                                So aside from getting you the right clothing, products, and suggestions, you’ll come
+                                away with the right knowledge to do this yourself that will last a lifetime.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon4.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;">
+                                SPEED & EFFICIENCY
+                            </h4>
+                            <p>
+                                How many hours, even years, have you wasted trying to figure this out on your own? <span
+                                    style="text-decoration: underline;">How nice would it be to be given a precise road
+                                    map of exactly what to do to become the most stylish version of yourself? </span>
+                            </p>
+                            <p>
+                                Most consultants charge hourly, meaning they’re incentivized to drag out the process of
+                                helping you. <span style="text-decoration: underline;">Here, everything is at a packaged
+                                    rate. It’s optimized for efficiency, </span> getting it done right the first time.
+                                You can expect to get yourself a new wardrobe and know how to put it together in record
+                                time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon5.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;">
+                                TRACK RECORD
+                            </h4>
+                            <p>
+                                <span style="text-decoration: underline;">PIVOT is the highest-rated men’s image
+                                    consultancy in the United States of America. </span> hat doesn’t happen by accident
+                                and isn’t something I take lightly.
+                            </p>
+                            <p>
+                                hat doesn’t happen by accident and isn’t something I take lightly.
+                            </p>
+                            <p>
+                                <span style="text-decoration: underline;">Men’s Health, Men’s Journal, Ask Men, Insider,
+                                    and other news outlets think so too. </span>You’ll regularly find PIVOT style advice
+                                among those pages.
+                            </p>
+                            <p>
+                                <span style="text-decoration: underline;"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="/assets/img/icon6.png" width="350" alt="">
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-center" style="font-style: normal;
+                            font-size: 18px;
+                            letter-spacing: .03em;
+                            line-height: 1.7em;
+                            text-transform: capitalize;">
+                                100% MONEY-BACK GUARANTEE
+                            </h4>
+                            <p>
+                                For every client. For every service.<span style="text-decoration: underline;">A 100%
+                                    money-back guarantee backs you up if you’re not satisfied with the results. </span>
+                            </p>
+                            <p>
+                                This doesn’t exist anywhere else. No other service offers this level of success
+                                guarantee and instead will lock you into hourly rates and contracts. Go ahead and look;
+                                we’ll wait.
+                            </p>
+                            <p>
+                                <span style="text-decoration: underline;">We’ve made it so you quite literally have
+                                    nothing to lose </span> - the work always speaks for itself.
+                            </p>
+                            <p>
+                                <span style="text-decoration: underline;"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .btnnn {
+                    color: #c20000;
+                }
+
+                .applyfor:hover {
+                    background-color: #c20000;
+                    color: #fff;
+                }
+
+                .applyfor:hover .btnnn {
+                    color: #fff;
+                }
+            </style>
+            <div class="row justify-content-center">
+                <div class="col-md-8 px-5 py-3 text-center applyfor"
+                    style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                    <a href="" class="btnnn" style="text-decoration: none;">
+                        APPLY FOR A COMPLIMENTARY 20-MINUTE STYLE STRATEGY CALL WITH PATRICK HERE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-area-7" style="padding: 9rem 0 9rem 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/insider.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/bloomberg.png" width="158" height="78" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/menhealth.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/askmen.png" width="158" height="78" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/newyork.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/menjournal.png" width="158" height="78" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/nbc.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/modernluxry.png" width="158" height="78" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/thewash.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/wsj.png" width="158" height="78" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/assets/img/cnn.png" width="158" height="78" alt="">
+                </div>
+                <div class="col-md-2 pt-4">
+                    <img src="/assets/img/bestlife.png" width="158" height="78" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-8 py-5">
+        <div class="container">
+            <div class="row justify-content-center pt-4">
+                <div class="col-md-8">
+                    <h1>MOST POPULAR MEN'S STYLE POSTS</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="slideshow2 pt-5 p-2">
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-10 text-center">
+                    <h1 class="fw-bolder" style="font-size: 42px;">
+                        LATEST MEN’S STYLE ARTICLES FROM THE BLOG
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="slideshow3 pt-5 p-2">
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/32+style+tips+for+men.png" class="pb-2" width="216" height="216"
+                                alt="">
+                            <span style="color: #ccc;">Nov 28, 2022</span>
+                            <p style="font-size: 18px;">
+                                32 Style Tips For Men
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 6REM;">
+                <div class="col-md-4 px-5 py-3 text-center applyfor"
+                    style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                    <a href="" class="btnnn" style="text-decoration: none;">
+                        READ MORE ARTICLES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-09">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-6 text-end">
+                    <h1 style="text-align:right;white-space:pre-wrap; color: white;text-transform: uppercase;">
+                        <strong>Real Style &amp; <br> Grooming advice for real men.</strong> </h1>
+                    <p class="text-white ps-5 pt-2 pb-5">
+                        Straight Talk Styling. One-On-One Help To Make You Look Your Best From A Decade-Long Style
+                        Expert. It’s Time To Take The Guesswork Out Of Looking Good.
+                    </p>
+                    <a href="" class="gromadvicebtn">APPLY FOR A CALL TO LEARN MORE</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-area-10" style="background-color: #011e3e; padding:9rem 0 9rem 0;">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-5">
+                    <h1 style="color: white;text-transform: uppercase;">
+                        <strong>DON’T SPEND ANOTHER MOMENT NOT LOOKING THE WAY YOU SHOULD.</strong>
+                    </h1>
+                </div>
+                <div class="col-md-6">
+                    <p class="text-white" style="font-size: 18px;">
+                        Picture your closet. You know what to wear without hesitation. You pull out a beautifully made
+                        shirt that fits you perfectly with a color that enhances your complexion. You slide on
+                        comfortable pants that feel like they were made just for you. You walk into the bathroom and
+                        spray a hint of your new cologne that matches your personality. You catch yourself in the
+                        mirror, looking fantastic. You walk out the door feeling confident and loving the way you look.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-11" style="padding:6rem 0 6rem 0;">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6">
+                    <img src="/assets/img/Virtual-online-personal-stylist-for-men.png" width="347" height="350" alt="">
+                </div>
+                <div class="col-md-6">
+                    <h1 style="text-transform: uppercase;">
+                        <strong>ONLINE PERSONAL STYLING & VIRTUAL IMAGE CONSULTING SERVICES ARE AVAILABLE</strong>
+                    </h1>
+                    <p class="pt-4" style="font-size: 18px;">
+                        No Need To Be In-Person.
+                        <br>
+                        <br>
+                        Online Style Consultations With Patrick Offer The Same In-Depth Experience Virtually, Working
+                        1-On-1 To Transform Your Style And Grooming As Efficiently As Possible.
+                        <br>
+                        <br>
+                        Know Precisely What You Need To Do To Become The Best-Looking Version Of Yourself.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12 stylegrooming">
+                            <a href="">VIEW THE ONLINE STYLE + GROOMING CONSULTATION WITH PATRICK HERE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-area-12 themecolor">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="m-4">
+                        <div class="accordion border-0" id="myAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        + How Is This Different From A Men's Style Subscription Box Like Stich Fix Or
+                                        Trunk Club?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <p>
+                                            With a men's style box, each month you're either paying for the
+                                            subscription, paying for clothing, or paying for the "styling fee". That's a
+                                            lot to deal with.
+                                        </p>
+                                        <p>
+                                            Your closet shouldn't be a revolving door of menswear. My focus is on
+                                            providing you with high-quality options and having them last you a very long
+                                            time.
+                                        </p>
+                                        <p>
+                                            This is a much more personalized service that takes into account who you are
+                                            and adapts the clothing to meet that. I focus on an inside-out approach,
+                                            making sure the clothing you're wearing is congruent with your age, career,
+                                            personal style, body type, etc.
+                                        </p>
+                                        <p>
+                                            Subscription boxes only send stuff from the brands they work with/for. It's
+                                            no wonder the guys who use these boxes all look the same. They were all sent
+                                            the same stuff.
+                                        </p>
+                                        <p>
+                                            When I work with a client, or you shop on your own, the entire world is your
+                                            store. I've recommended high-quality jewelry from a small shop in Brooklyn,
+                                            leather jackets from an Australian motorcycle brand, and even saved guys
+                                            money by telling them inexpensive brands where they can get basics. Whatever
+                                            works best for the client.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo">
+                                        + Why Can't I Just Have My Wife Or Girlfriend Help With My Clothing?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <p>
+                                            This is what most men do. Any outside opinion can help if you're truly
+                                            clueless. However, most women have a specific way they like to see men
+                                            dressed and their own preferences for clothing.
+                                        </p>
+                                        <p>
+                                            Sometimes, a woman will recommend something for a man based on her opinion
+                                            of the item, not what looks best on him. Attraction, personal preference,
+                                            and other biases are hard to ignore.
+                                        </p>
+                                        <p>
+                                            Even if a woman knows how to dress herself, that doesn't transfer over.
+                                            Women have no experience dressing the male body. They don't know the issues
+                                            we deal with as men, both mentally and physically when it comes to clothing.
+                                        </p>
+                                        <p>
+                                            Here, you're getting a highly educated perspective on what actually looks
+                                            best on you - personal preferences, and attraction aside.
+                                        </p>
+                                        <p>
+                                            This is as close to a science as it can be. One client remarked, "I was
+                                            pleased when you provided what amounts to a mathematical approach to style".
+                                            No fluff. Straight talk. Guy-to-guy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree">
+                                        + Do You Have A Guarantee?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <p>
+                                            Yes.
+                                        </p>
+                                        <p>
+                                            I believe in these consultations so much; I offer a 100% money-back
+                                            guarantee.
+                                        </p>
+                                        <p>
+                                            If you think you didn't get as much value as you wanted out of your session,
+                                            just tell me. I'll give you everything back. Seriously.
+                                        </p>
+                                        <p>
+                                            Find someone else who backs their approach as much, we’ll wait.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour">
+                                        + Is This An Investment?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <p>
+                                            Yes.
+                                        </p>
+                                        <p>
+                                            First, think about this as an investment in getting your time back. You’re
+                                            shortcutting this process by hundreds of hours (the process of learning what
+                                            looks good on you and actually shopping - how to implement it/where to find
+                                            the stuff)
+                                        </p>
+                                        <p>
+                                            Also, think about this as investment insurance for every purchase you make
+                                            from now on and set you up with a foundational capsule wardrobe…
+                                        </p>
+                                        <p>
+                                            You’re saving money by not throwing away cash on bad purchases. How many
+                                            times have you wasted money on bad quality clothing that doesn’t go with
+                                            anything, doesn’t fit right, and doesn’t make you smile?
+                                        </p>
+                                        <p>
+                                            The consultation saves you time, money, and from the stress of trying to
+                                            figure it out yourself. You get extreme expert guidance on menswear (I only
+                                            work with men) to successfully reach your goals (look incredible) in record
+                                            time.
+                                        </p>
+                                        <p>
+                                            As far as a budget for new clothing specifically, that depends on what your
+                                            closet needs, your goals, your personal preferences, what you do for work,
+                                            etc.
+                                        </p>
+                                        <p>
+                                            Keep in mind your budget doesn’t matter to me - my consulting fee stays the
+                                            same. But in order to give you a good versatile wardrobe, I recommend
+                                            something between 3-6,000 for in-person work.
+                                        </p>
+                                        <p>
+                                            For the online consultations, a minimum of 1,500 is a good start. But again,
+                                            all this is based on your needs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive">
+                                        + Can I Learn This Stuff From Your Blog Or Consuming Style Youtube Videos?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <p>
+                                            Plenty of bloggers and Youtubers have great info out there. However, they
+                                            are rarely trained personal stylists. If you put in the work of consuming
+                                            books and weeks of Youtube videos, and blogs, yes, you’d certainly have
+                                            passable style. It’s a good place to start if you don’t have a budget to
+                                            work with yet.
+                                        </p>
+                                        <p>
+                                            Or, you could take one day and have an expert deliver all the answers you
+                                            need, tailored specifically around you, packaged up and delivered 1-on-1 -
+                                            either in-person or online.
+                                        </p>
+                                        <p>
+                                            This is like giving you a blueprint on what you need to do. You also then
+                                            have access to ask questions and get help as you implement things from me
+                                            personally.
+                                        </p>
+                                        <p>
+                                            The problem is that the courses, e-books, Youtube videos, blogs, etc. are
+                                            not personalized to you. Men never had a way to get the real answers they
+                                            needed… Now there is.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-13 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="slideshow4 pt-5 p-2">
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+                        <div class="text-center">
+                            <img src="/assets/img/slideshow4.png" class="pb-2" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 px-5 py-3 text-center applyfor"
+                    style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                    <a href="" class="btnnn" style="text-decoration: none;">
+                        READ MORE CLIENT'S TESTIMONIAL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-14" style="background-color: #011e3e; padding:9rem 0 9rem 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-md-8 text-center">
+                    <h1 class="px-5 pb-3" style="color: white;text-transform: uppercase;">
+                        <strong>IT’S MORE THAN STYLE CONSULTING - GROOMING CONSULTING IS INCLUDED.</strong>
+                    </h1>
+                    <p class="text-white">
+                        The service is a whole package. More than just selecting clothing like a subscription box or
+                        personal shopper, I take into account other aspects of your image. Improvements to your
+                        hairstyle, skincare, and facial hair are standard with each consultation.
+                    </p>
+                    <br>
+                    <p class="text-white">
+                        You’ll get services from our master barbers and estheticians during select in-person
+                        consultations with me. If you work with me online, you’ll have the same information, example
+                        photos, and products you need to get the same result on your own.
+                    </p>
+                    <br>
+                    <p class="text-white">
+                        Enjoy the new your from top to bottom.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-area-15" style=" padding:9rem 0 9rem 0;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 pe-5">
+                    <h1 class="fw-semibold">
+                        <strong> HOW TO WORK WITH ME </strong>
+                    </h1>
+                    <br>
+                    <p>
+                        There are two ways in which you can work with me, either virtually doing an online
+                        transformation program or an in-person transformation program with me physically present.
+                    </p>
+                    <br>
+                    <p>
+                        Learn more about each and choose the option that suits your needs best. The same information and
+                        personalized advice and shopping come with both. If you want a customized option, you can reach
+                        out directly, and things will be assessed on a case-by-case basis.
+                    </p>
+                    <br>
+                    <p>
+                        You can also apply for a complimentary Style Strategy Call if you’re unsure which option works
+                        best. By the way,<strong> a 100% money-back guarantee backs every single consultation.</strong>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <div class="">
+                        <img src="./assets/img/howtowork.jpeg" width="250" height="350" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section-area-16" style="padding:6rem 0 6rem 0;">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-5">
+                    <img src="/assets/img/theonlineimg.jpg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12 text-end">
+                            <a style="font-size: 42px;background-color: #001f3e; color: white;">
+                                <strong>THE ONLINE IMAGE CONSULTATION </strong>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="pt-4" style="font-size: 18px; line-height: 2.1rem;">
+                        A “Done-With-You Approach”. Work 1-On-1 With Me, Delivering The Most In-Depth Style And Grooming
+                        Knowledge Online, Tailored To You - All Delivered To You Via Zoom. We Go Over Grooming, Color,
+                        Fit, Style, And How To Execute It All. At The End Of The Program, You’ll Leave With More Style +
+                        Grooming Knowledge Than 99% Of Guys On The Planet, A New Hair/Skin Routine, And A Full Closest
+                        Full Of Clothing, All Tailored Around Your Body, Budget, Coloring, Style, And More. Get Yourself
+                        Looking Incredible From Head To Toe In The Most Efficient Way Possible, All Online 1-On-1 With
+                        Me.
+                    </p>
+                    <div class="row justify-content-end pt-3">
+                        <div class="col-md-5 px-3 py-4 text-center applyfor"
+                            style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                            <a href="" class="btnnn" style="text-decoration: none;">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-17" style="padding:6rem 0 6rem 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a style="font-size: 42px;background-color: #001f3e; color: white;">
+                                <strong>THE IN-PERSON IMAGE CONSULTATION </strong>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="pt-4" style="font-size: 18px; line-height: 2.1rem;">
+                        A “Done-For-You” Approach. Work 1-On-1 With Me Where We Spend The Day In-Person Improving Your
+                        Appearance From Head To Toe In Person. We Go Through Your Wardrobe, Tailor Your Existing
+                        Clothing To Make It Perfect, Donate What Isn’t Working, And Then Go On A Personal Shopping Trip
+                        Together. All Items Are Already Pre-Selected For You, Waiting In A Personal Dressing Room. It’s
+                        The Easiest And Most Efficient Way To Get A Perfect Wardrobe. You’ll Leave Our Time Together
+                        With Personalized Style Knowledge, So You Know How To Do It In The Future, Your Previous Closet
+                        Clean Out And Tailored, As Well As A Wardrobe Full Of Beautiful Clothing And Products Based On
+                        What Works Best For You.
+                    </p>
+                    <div class="row justify-content-end pt-3">
+                        <div class="col-md-5 px-3 py-4 text-center applyfor"
+                            style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                            <a href="" class="btnnn" style="text-decoration: none;">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/img/theinperson.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-area-18" style="padding:6rem 0 6rem 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1 class="px-5 pb-3">
+                        <strong>COMPLIMENTARY STYLE STRATEGY CALL</strong>
+                    </h1>
+                    <p style="line-height: 2rem;">
+                        If you have questions or are unsure of the best option for yourself, you can apply for a
+                        20-minute Style Strategy Call with me personally. We’ll walk through your goals, I’ll give you
+                        more information, and you can choose something based on your needs. <strong>Currently, there is
+                            no fee for this</strong>. Look forward to seeing you there.
+                    </p>
+                    <br>
+
+                    <p>
+                        - Patrick
+                    </p>
+                </div>
+            </div>
+            <style>
+                .btnnn {
+                    color: #c20000;
+                }
+
+                .applyfor:hover {
+                    background-color: #c20000;
+                    color: #fff;
+                }
+
+                .applyfor:hover .btnnn {
+                    color: #fff;
+                }
+            </style>
+            <div class="row justify-content-center pt-4">
+                <div class="col-md-8 px-5 py-4 text-center applyfor"
+                    style="font-size: 18px; border: 2px solid#c20000; border-radius: 300px; letter-spacing: 0.15rem; color: #c20000; font-weight: 700; line-height: 1.3rem;">
+                    <a href="" class="btnnn" style="text-decoration: none;">
+                        APPLY FOR YOUR COMPLIMENTARY 20-MINUTE STRATEGY CALL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-area-19" style="padding:6rem 0 6rem 0;background-color: #e0e0e0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="/assets/img/footerform.png" width="443" alt="">
+                </div>
+                <div class="col-md-7">
+                    <div class="row justify-content-center p-5" style="background-color: rgba(189, 189, 189, 1);">
+                        <div class="col-md-10 text-center formsec" >
+                            <h2 style="font-size: 30px;">
+                                GET ACCESS TO THE WEEKLY "SUNDAY OF STYLE" EMAIL + GET 3 STYLE & GROOMING GUIDES
+                            </h2>
+                            <p>
+                                Join thousands of men who look forward to the “Sunday of Style” email - A weekly
+                                newsletter delivered every Sunday with exclusive tips, style secrets, shopping links,
+                                etc., not found anywhere else. You’ll have access to stylist tips clients pay thousands
+                                for.
+                            </p>
+                            <br>
+                            <p>
+                                PLUS, you’ll gain access to these three guides to improve the way you look right now. As
+                                many as you want…
+                            </p>
+                            <address>
+                                “Dressing For Your Dates”
+                                “The 25 Common Style Mistakes”
+                                ”How To Get a Chiseled Jawline”
+                            </address>
+                            <br>
+                            <p>
+                                Get complimentary access right now.
+                            </p>
+                            
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <form action="" class="formform">
+                                <input type="text" class="form-control bg-white" placeholder="First Name">
+                                <input type="text" class="form-control bg-white" placeholder="Last Name">
+                                <input type="text" class="form-control bg-white" placeholder="Email Address">
+                                <button class="form-button">GET YOUR GUIDES</button>
+                            </form>
+                            <br>
+                            <span>
+                                We respect your privacy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-area-20" style="padding:6rem 0 6rem 0;background-color: #e0e0e0;">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                    <div class="col-md-8">
+                        <h1 class="text-center">
+                            <strong>
+                                CONNECT 
+                            </strong>
+                        </h1>
+                    </div>               
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 px-3 py-4 text-center applyfor1"
+                    style="font-size: 18px; border: 2px solid black; border-radius: 300px; letter-spacing: 0.15rem; color: black; font-weight: 700; line-height: 1.3rem;">
+                    <a href="" class="btnnn1" style="text-decoration: none;">
+                        APPLY FOR A FREE STRATEGY CALL
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4 text-center mt-4">
+                <div class="col-md-8">
+                    <p>
+                        <strong>OR EMAIL</strong>
+                    </p>
+                    <br>
+                    <p>EMAIL: <strong style="text-decoration: underline;">HELLO@PIVOTIMAGE.COM</strong></p>
+                </div> 
+                <div class="col-md-8">
+                    <img src="/assets/img/email.png" width="25" alt="">
+                    <img src="/assets/img/spotify.png" width="25" class="ms-2" alt="">
+                    <img src="/assets/img/yelp.png" width="25" class="ms-2" alt="">
+                    <img src="/assets/img/instagram.png" width="25" class="ms-2" alt="">
+                </div> 
+                <div class="col-md-12 footernav mt-4">
+                    <p>
+                        <a href="">TERM OF SERVICES</a>
+                        <a href="" class="ms-3">PRIVACY POLICY</a>
+                        <a href="" class="ms-3">CONTACT</a> 
+                        <a href="" class="ms-3">ADVERTISING & PARTNERSHIP</a>
+                        <a href="" class="ms-3">DMCA POLICY</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                   <p>
+                    <em>
+                        Copyright Pivot Image Consulting, LLC. © 2015-2023 | All Rights Reserved. Unauthorized Use & Replication Prohibited By Law And Will Be Prosecuted. | San Diego, CA / Scottsdale, AZ
+
+                    </em>
+                   </p>
+                   <img class="mt-4" src="/assets/img/dmca-badge.png" alt="">
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var $slickElement = $('.slideshow');
+
+            $slickElement.slick({
+                autoplay: true,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+            });
+
+
+            var $slickElement2 = $('.slideshow2');
+
+            $slickElement2.slick({
+                autoplay: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+            });
+
+            var $slickElement3 = $('.slideshow3');
+
+            $slickElement3.slick({
+                autoplay: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+            });
+
+            var $slickElement4 = $('.slideshow4');
+
+            $slickElement4.slick({
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 3,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+            });
+        });
+    </script>
+
+</body>
+
+</html>

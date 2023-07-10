@@ -1,0 +1,267 @@
+
+body{
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Proxima Nova'; /* Define the name of the font family */
+    src: url('assets/css/Proxima Nova Font.otf') format('opentype'); /* Specify the path to the font file */
+  }
+:root{
+    --primary-color : #4c4c4c
+}
+.themecolor{
+  color: white;
+  background-color:  #011e3e;
+}
+
+.navBackColor{
+    background-color: var(--primary-color);
+    letter-spacing: 0.25rem;
+}
+.navBackColor .nav-link{
+    color: #fff;
+    /* margin-left: 0.5rem; */
+}
+/* .navBackColor .nav-link{
+    color: #fff;
+} */
+
+.ul-space-li li{
+    /* padding: 0.5rem 0; */
+    line-height: 2.8rem;
+    letter-spacing: 0.02rem;
+    font-size: 19px;
+    /* font-family: proxima; */
+}
+.ul-space-li li::marker{
+    /* color: red; */
+    font-size: 0.7rem;
+}
+.transitionEffect img{
+    position: absolute;
+    left: -100px;
+    animation: setleft 2s forwards;
+}
+@keyframes setleft {
+    0% {left: -100px}
+    100% {left: 10px}
+}
+.section-area-03 {
+    background-image: url(/assets/img/background-Image.png);
+    background-repeat: no-repeat;
+    background-size: 120% 100%;
+    background-position: center;
+}
+/* banner area section */
+
+.home {
+    height: 100vh;
+    position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -888; /* Semi-transparent black overlay */
+  /* Add additional styles or background image as needed */
+}
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -9999;
+}
+.home-content {
+    position: relative;
+    padding-top: 150px;
+    color: #fff;
+    text-align: center;
+}
+.home-inner h1 {
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 42px;
+    letter-spacing: .03em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    text-rendering: optimizeLegibility;
+}
+
+.home p {
+    color: #f2f2f2;
+    margin-bottom: 0;
+}
+
+.home-content button {
+    display: block;
+    font-size: clamp(14px, 1.5vw, 18px);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    margin: 50px auto 0;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+/* looking goos section */
+.looking-good{
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 42px;
+    letter-spacing: .01em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: black;
+}
+
+
+
+.section-area-09 {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    background-image: url(/assets/img/groomingadvice.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+.section-area-09 .gromadvicebtn{
+    text-decoration: none;
+    color: white;
+    background-color: #c70000;
+    padding: 13px 26px;;
+    border-color:  #c70000;
+    border-radius: 300px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+.stylegrooming a{
+    text-decoration: none;
+    color: white;
+
+}
+.stylegrooming{
+    text-align: center;
+    background-color: #0c0c0c;
+    padding: 10px 24px;
+    border-color:  #000000;
+    border-radius: 300px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: 1rem;
+}
+
+
+
+
+    .section-area-12{
+        padding:9rem 0 9rem 0;
+        color: white;
+    }
+
+	/* Custom style */
+    .accordion-button::after {
+       background-image: url("/assets/img/Add.svg");
+    }
+    .accordion-button svg{
+        fill: white;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("/assets/img/Remove.svg");       
+    }
+
+    .accordion-button,.accordion-button:not(.collapsed){
+    background-color: #011e3e;
+    color: white;
+    padding: 3rem 0 3rem 0;
+    box-shadow: unset;
+    }
+    .accordion-item{
+        border-left: 0;
+        border-right: 0;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+        border-color: #5a6575;
+        background-color: #011e3e;
+        color: white;
+
+    } 
+    .accordion-item:first-of-type .accordion-button{
+       
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        background-color: #011e3e;
+        color: white;
+    }
+    .accordion-item:last-of-type{
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+    .accordion-button:focus {
+        z-index: 3;
+        border-color: none;
+        outline: 0px;
+        box-shadow: none;
+    }
+    .themecolor .accordion .card-body{
+        padding-right: 10rem;
+    }
+.formsec p{
+    font-size: 15px;
+}
+.formform input{
+    margin-bottom: 10px;
+    padding: 1rem;
+    border-radius: unset;
+}
+.form-button{
+    font-size: 16px; 
+    padding: 0.5rem 1rem 0.5rem 1rem; 
+    background-color: transparent;
+     border: 2px solid #c70000; 
+     color: #c70000;
+}
+.form-button:hover{
+    background-color: #c70000;
+    color: white;
+}
+
+
+
+.btnnn1{
+    color: black;
+}
+.applyfor1:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.applyfor1:hover .btnnn1{
+    color: #fff;
+}
+
+.footernav a{
+    text-decoration: none;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    color: #000000;
+}
