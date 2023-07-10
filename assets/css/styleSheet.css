@@ -2,6 +2,7 @@
 body{
     overflow-x: hidden;
 }
+
 @font-face {
     font-family: 'Proxima Nova'; /* Define the name of the font family */
     src: url('assets/css/Proxima Nova Font.otf') format('opentype'); /* Specify the path to the font file */
